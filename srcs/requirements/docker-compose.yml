@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  mariadb:
+    build: ./mariadb
+    container_name: mariadb
