@@ -4,3 +4,31 @@ services:
   mariadb:
     build: ./mariadb
     container_name: mariadb
+    ports:
+      - 3306:3306
+  wordpress:
+    build: ./wordpress
+    container_name: wordpress
+    ports:
+      - 9000:9000
+    volumes:
+      - wordpress-data:/var/www/html/
+    depends_on:
+      - mariadb
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - 443:443
+    volumes:
+      - wordpress-data:/var/www/html/
+    depends_on:
+      - wordpress
+
+volumes:
+  wordpress-data:
+    driver: local
+    driver_opts:
+      type: volume
+      device: /home/wordpress
+      o: bind
