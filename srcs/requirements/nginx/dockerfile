@@ -1,7 +1,5 @@
 FROM debian:bullseye
 
-EXPOSE 443
-
 RUN apt update && apt install -y nginx openssl
 
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-ssl.key -out /etc/ssl/certs/nginx-ssl.crt -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=example.com"

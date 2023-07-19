@@ -12,7 +12,7 @@ services:
     ports:
       - 9000:9000
     volumes:
-      - wordpress-data:/var/www/html/
+      - wordpress-data:/var/www/html
     depends_on:
       - mariadb
   nginx:
@@ -21,7 +21,7 @@ services:
     ports:
       - 443:443
     volumes:
-      - wordpress-data:/var/www/html/
+      - wordpress-data:/var/www/html
     depends_on:
       - wordpress
 
@@ -30,5 +30,6 @@ volumes:
     driver: local
     driver_opts:
       type: volume
-      device: /home/wordpress
+      device: /home/wassim/wordpress
       o: bind
+
