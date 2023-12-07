@@ -21,22 +21,6 @@ Firstly You should install docker and docker-compose and make in your OS, then g
 Discribed below :
 <img src="./images/structure.png">
 
-## What is new in the bonus?
-
-In bonus part, I configured five services, described below:
-
-* Setup Redis:
-    Set up Redis cache for  my WordPress website in order to properly manage the Cache.
-* Setup FTP:
-    Set up an FTP server container pointing to the volume of my WordPress website.
-* Setup static website:
-    I created a simple static website using (HTML/CSS javascript) and I use the Apache web server.
-* Setup Adminer:
-    Adminer is a tool for managing databases. It is similar to other popular database management tools like phpMyAdmin and SQL Management Studio, but it is designed to be lightweight and easy to use
-* Setup Cadvisor:
-    CAdvisor (short for "container Advisor") is an open-source tool developed by Google for monitoring resource usage and performance of containerized applications.
-
-For more infos check the subject of the project in the subject folder.
 
 ## Resources and tutorial
 
